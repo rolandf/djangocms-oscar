@@ -6,7 +6,9 @@
 <!--[if lt IE 7]>      <html lang="{{ LANGUAGE_CODE|default:"en-gb" }}" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="{{ LANGUAGE_CODE|default:"en-gb" }}" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="{{ LANGUAGE_CODE|default:"en-gb" }}" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="{{ LANGUAGE_CODE|default:"en-gb" }}" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="{{ LANGUAGE_CODE|default:"en-gb>
+<link rel="stylesheet" href="../../../../django-oscar/src/oscar/static/oscar/less/page/responsive-767px-max.less">
+</html>" }}" class="no-js"> <!--<![endif]-->
     <head>
         <title>{% if display_version %}[{% trans "Build" %} {{ version }}] {% endif %}{% block title %}{{ shop_name }} - {{ shop_tagline }}{% endblock %}</title>
 
@@ -42,10 +44,10 @@
                 {% compress css %}
                     {% if use_less %}
                         <link rel="stylesheet" type="text/less" href="{% static "oscar/less/styles.less" %}" />
-                        <link rel="stylesheet" type="text/less" href="{% static "oscar/less/responsive.less" %}" />
+                        <link rel="stylesheet" type="text/less" href="{% static "oscar/less/page/responsive-767px-max.less" %}" />
                     {% else %}
                         <link rel="stylesheet" type="text/css" href="{% static "oscar/css/styles.css" %}" />
-                        <link rel="stylesheet" type="text/css" href="{% static "oscar/css/responsive.css" %}" />
+                        <link rel="stylesheet" type="text/css" href="{% static "oscar/less/page/responsive-767px-max.less" %}" />
                     {% endif %}
                 {% endcompress %}
             {% endblock %}
