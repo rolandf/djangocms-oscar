@@ -19,13 +19,16 @@ Features
 - Oscar's "Browse store" dropdown includes CMS pages
 - A "Featured product" CMS plugin to be able to add individual products on
   CMS pages
+- A "Viewed products" CMS plugin allows to add recently viewed products on
+  CMS pages (same as Oscar's ``recently_viewed_products`` do)
+
 
 Tested with
 ===========
 
-* django-cms 3.0.2
-* django-oscar >=0.7.1, <0.8
-* Django 1.5.8
+* django-cms 3.4.2
+* django-oscar >=1.3, <1.5
+* Django 1.8.17
 * Python 2.7
 
 NOTE: Currently, django CMS does not play well with the new @atomic decorator
@@ -107,7 +110,18 @@ To get started using ``djangocms-oscar``:
         OSCAR_MAIN_TEMPLATE_DIR,
     )
 
-- Run ``syncdb`` or ``migrate`` if you're using South.
+- Plugins allows to add some templates. Place product.html or viewed_products.html
+  to the appropriate folder, e.g.
+  djangocms_oscar/plugins/featured_product/my_product/
+  or
+  djangocms_oscar/plugins/viewed_products/index/
+  and set variables::
+
+    DJANGOCMS_OSCAR_PRODUCT_TEMPLATES = [('my_product', _('My lovely product'))]
+    DJANGOCMS_OSCAR_VIEWED_TEMPLATES = [('index', _('For index page'))]
+
+
+- Run ``migrate djangocms_oscar``.
 
 Optional settings
 -----------------
@@ -119,7 +133,7 @@ They're a good starting point and can be used like this::
     # settings.py
 
     CMS_TEMPLATES = (
-        ('djangocms_oscar/full_width.html', 'Full width (no sidebars)'),
+        ('djangocms_oscar/full_width.html', 'Full width (no sidebars)'),
         ('djangocms_oscar/with_sidebar.html', 'Two column (left-hand sidebar)'),
     )
 

@@ -8,3 +8,10 @@ Initial release.
 unreleased
 ----------
 - Added a CMSAttachMenu, which exposes Oscar's categories as CMS menu entries.
+
+0.2.0 - released March 8, 2017
+----------------------------------
+
+- Refactored FeaturedProduct plugin, it's now compatible with Django-CMS 3.4.2
+- Added ViewedProducts plugin, which replaces recently_viewed_products tag in the Django-CMS pages
+- Added Russian locale and translation
