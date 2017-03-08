@@ -5,7 +5,7 @@ PROJECT_DIR = os.path.dirname(__file__)
 
 
 setup(name='djangocms-oscar',
-      version='0.1',
+      version='0.2.0',
       #url='https://github.com/tangentlabs/django-oscar',
       author="Maik Hoepfel",
       author_email="maik.hoepfel@tangentlabs.co.uk",
@@ -16,8 +16,8 @@ setup(name='djangocms-oscar',
       packages=find_packages(),
       include_package_data=True,
       install_requires=[
-          'django-cms>=3.0.2',
-          'django-oscar>=0.7.1',
+          'django-cms>=3.4.2',
+          'django-oscar>=1.1',
       ],
       # See http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
