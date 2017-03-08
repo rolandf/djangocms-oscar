@@ -1,0 +1,9 @@
+{% load product_tags %}
+
+{% with instance=plugin.instance %}
+<div>
+    <h3>{% if instance.title %}{{ instance.title }}{% endif %}</h3>
+    {% render_product instance.product %}
+    {% if instance.description %}<div>{{ instance.description|safe }}</div>{% endif %}
+</div>
+{% endwith %}

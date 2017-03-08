@@ -1,0 +1,13 @@
+{% load i18n %}
+{% load product_tags %}
+
+{% if products %}
+<h3>{% if instance.title %}{{ instance.title|safe }}{% else %}{% trans 'Products you recently viewed' %}{% endif %}</h3>
+<div class="viewed-products">
+    {% for product in products %}
+    <div class="item{% if forloop.first %} active{% endif %}">
+    {% include "catalogue/partials/view_list_product.html" %}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
