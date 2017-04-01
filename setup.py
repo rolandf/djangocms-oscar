@@ -17,7 +17,7 @@ setup(name='djangocms-oscar',
       include_package_data=True,
       install_requires=[
           'django-cms>=3.4.2',
-          'django-oscar>=1.1',
+          'django-oscar>=1.4,<1.5',
       ],
       # See http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
