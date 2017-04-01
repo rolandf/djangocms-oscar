@@ -27,13 +27,10 @@ Tested with
 ===========
 
 * django-cms 3.4.2
-* django-oscar >=1.3, <1.5
-* Django 1.8.17
-* Python 2.7
+* django-oscar 1.4
+* Django 1.9.12
+* Python 3.5.2
 
-NOTE: Currently, django CMS does not play well with the new @atomic decorator
-introduced in Django 1.6. Use django CMS from the master branch, or wait for
-the next release.
 
 Installation
 ============
